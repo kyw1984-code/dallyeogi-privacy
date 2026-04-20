@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>달력이 — 개인정보처리방침</title>
+  <style>
+    :root {
+      --pink: #FF8FAB;
+      --pink-light: #FFF0F3;
+      --text: #1F2937;
+      --text-sub: #4B5563;
+      --text-muted: #9CA3AF;
+      --border: #F3F4F6;
+      --bg: #FFFFFF;
+      --surface: #F9FAFB;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+                   'Noto Sans KR', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--pink-light);
+      border-bottom: 1px solid #FFE0E6;
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+
+    header .app-name {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--pink);
+      letter-spacing: -0.5px;
+    }
+
+    header .subtitle {
+      font-size: 14px;
+      color: var(--text-sub);
+      margin-top: 6px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 40px;
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .meta span strong { color: var(--text); }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding-left: 12px;
+      border-left: 3px solid var(--pink);
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: var(--text-sub);
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--pink);
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      background: var(--pink-light);
+      border: 1px solid #FFE0E6;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 15px;
+      color: #E05070;
+      font-weight: 600;
+    }
+
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+
+    .contact-box p { margin-bottom: 6px; }
+    .contact-box a { color: var(--pink); text-decoration: none; font-weight: 600; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      padding: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1A1A2E;
+        --surface: #16213E;
+        --text: #F9FAFB;
+        --text-sub: #D1D5DB;
+        --text-muted: #9CA3AF;
+        --border: #2D2D44;
+        --pink-light: #1E1030;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-name">🌸 달력이</div>
+  <div class="subtitle">생리 주기 트래커 · Privacy Policy</div>
+</header>
+
+<main>
+  <div class="meta">
+    <span><strong>시행일:</strong> 2025년 5월 1일</span>
+    <span><strong>최종 수정:</strong> 2025년 5월 1일</span>
+    <span><strong>개발자:</strong> CYK Intel</span>
+  </div>
+
+  <div class="highlight-box">
+    <p>🔒 달력이는 모든 건강 데이터를 사용자의 기기에만 저장합니다. 서버로 전송되지 않으며, 회원가입이 필요 없습니다.</p>
+  </div>
+
+  <section>
+    <h2>1. 수집하는 정보</h2>
+    <p>달력이는 앱 사용을 위해 아래 정보를 <strong>기기 내에서만</strong> 처리합니다.</p>
+    <ul>
+      <li>생리 시작일 및 종료일</li>
+      <li>증상 기록 (생리량, 통증, 신체 증상, 기분)</li>
+      <li>날짜별 메모</li>
+      <li>알림 설정 (D-3, D-1 알림 여부)</li>
+      <li>앱 환경설정 (다크모드, 주기 길이 등)</li>
+    </ul>
+    <p style="margin-top:12px;">위 데이터는 모두 사용자 기기의 로컬 데이터베이스(SQLite)에 저장되며, 외부 서버나 클라우드에 전송되지 않습니다.</p>
+  </section>
+
+  <section>
+    <h2>2. 수집하지 않는 정보</h2>
+    <ul>
+      <li>이름, 이메일, 전화번호 등 개인 식별 정보</li>
+      <li>위치 정보</li>
+      <li>연락처, 사진, 카메라 접근</li>
+      <li>광고 식별자 (IDFA) — 맞춤 광고 미사용</li>
+      <li>기기 고유 식별자</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. 정보 이용 목적</h2>
+    <p>수집된 데이터는 다음 목적으로만 사용됩니다.</p>
+    <ul>
+      <li>생리 주기 예측 및 가임기 계산</li>
+      <li>생리 예정일 알림 발송</li>
+      <li>통계 화면 표시</li>
+      <li>사용자가 직접 요청한 데이터 백업/복원</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>4. 제3자 제공</h2>
+    <p>달력이는 사용자의 건강 데이터를 어떠한 제3자에게도 판매하거나 제공하지 않습니다.</p>
+    <p>단, 앱 내 광고 표시를 위해 Google AdMob SDK를 사용합니다. AdMob은 광고 식별자를 사용할 수 있으며, 이는 Google의 개인정보처리방침을 따릅니다.</p>
+    <ul>
+      <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:#FF8FAB;">Google 개인정보처리방침 →</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. 광고 (Google AdMob)</h2>
+    <p>달력이는 무료 서비스 유지를 위해 배너 광고를 표시합니다.</p>
+    <ul>
+      <li>표시 광고: 배너 광고 (홈, 통계 화면 하단)</li>
+      <li>맞춤 광고: 미사용 (비개인화 광고만 표시)</li>
+      <li>광고 데이터는 Google이 자체 정책에 따라 처리</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>6. 데이터 보관 및 삭제</h2>
+    <p>모든 데이터는 사용자 기기에만 저장됩니다.</p>
+    <ul>
+      <li><strong>삭제 방법:</strong> 앱 삭제 시 모든 데이터가 즉시 삭제됩니다</li>
+      <li><strong>백업:</strong> 사용자가 직접 JSON 파일로 내보내거나 가져올 수 있습니다</li>
+      <li><strong>서버 데이터:</strong> 존재하지 않으므로 삭제 요청이 불필요합니다</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. 알림 권한</h2>
+    <p>생리 예정일 알림을 위해 알림 권한을 요청합니다. 알림 권한은 기기의 설정 앱에서 언제든지 철회할 수 있습니다. 알림을 거부해도 앱의 모든 핵심 기능을 사용할 수 있습니다.</p>
+  </section>
+
+  <section>
+    <h2>8. 아동 보호</h2>
+    <p>달력이는 13세 미만 아동을 대상으로 하지 않습니다. 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+  </section>
+
+  <section>
+    <h2>9. 방침 변경</h2>
+    <p>개인정보처리방침이 변경될 경우, 이 페이지를 통해 공지합니다. 중요한 변경사항은 앱 업데이트 노트에도 안내됩니다.</p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h2>문의</h2>
+    <div class="contact-box">
+      <p>개인정보 관련 문의사항이 있으시면 아래로 연락해주세요.</p>
+      <p><strong>개발자:</strong> CYK Intel</p>
+      <p><strong>이메일:</strong> <a href="mailto:kyw1984@gmail.com">kyw1984@gmail.com</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 CYK Intel · 달력이 · All rights reserved
+</footer>
+
+</body>
+</html>
