@@ -19,8 +19,8 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
-                   'Noto Sans KR', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                   "Noto Sans KR", sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.8;
@@ -67,9 +67,7 @@
 
     .meta span strong { color: var(--text); }
 
-    section {
-      margin-bottom: 40px;
-    }
+    section { margin-bottom: 40px; }
 
     h2 {
       font-size: 18px;
@@ -86,10 +84,7 @@
       margin-bottom: 12px;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+    ul { list-style: none; padding: 0; }
 
     ul li {
       font-size: 15px;
@@ -99,7 +94,7 @@
     }
 
     ul li::before {
-      content: '✓';
+      content: "✓";
       position: absolute;
       left: 0;
       color: var(--pink);
@@ -168,7 +163,7 @@
 <main>
   <div class="meta">
     <span><strong>시행일:</strong> 2025년 5월 1일</span>
-    <span><strong>최종 수정:</strong> 2025년 5월 1일</span>
+    <span><strong>최종 수정:</strong> 2026년 4월 23일 (v2.0)</span>
     <span><strong>개발자:</strong> CYK Intel</span>
   </div>
 
@@ -177,13 +172,14 @@
   </div>
 
   <section>
-    <h2>1. 수집하는 정보</h2>
+    <h2>1. 처리하는 정보</h2>
     <p>달력이는 앱 사용을 위해 아래 정보를 <strong>기기 내에서만</strong> 처리합니다.</p>
     <ul>
       <li>생리 시작일 및 종료일</li>
       <li>증상 기록 (생리량, 통증, 신체 증상, 기분)</li>
+      <li>기초체온(BBT) 기록 — 기기 내 SQLite에만 저장, 서버 전송 없음</li>
       <li>날짜별 메모</li>
-      <li>알림 설정 (D-3, D-1 알림 여부)</li>
+      <li>알림 설정 (생리 예정일 D-3·D-1 알림, 피임약 복용 알림 시간)</li>
       <li>앱 환경설정 (다크모드, 주기 길이 등)</li>
     </ul>
     <p style="margin-top:12px;">위 데이터는 모두 사용자 기기의 로컬 데이터베이스(SQLite)에 저장되며, 외부 서버나 클라우드에 전송되지 않습니다.</p>
@@ -202,17 +198,29 @@
 
   <section>
     <h2>3. 정보 이용 목적</h2>
-    <p>수집된 데이터는 다음 목적으로만 사용됩니다.</p>
+    <p>처리되는 데이터는 다음 목적으로만 사용됩니다.</p>
     <ul>
-      <li>생리 주기 예측 및 가임기 계산</li>
-      <li>생리 예정일 알림 발송</li>
+      <li>생리 주기 예측 및 가임기·배란일 계산</li>
+      <li>기초체온 그래프 시각화 (기기 내 처리)</li>
+      <li>생리 예정일 알림 발송 (로컬 푸시)</li>
+      <li>피임약 복용 알림 발송 (로컬 푸시, 설정 시 활성화)</li>
       <li>통계 화면 표시</li>
       <li>사용자가 직접 요청한 데이터 백업/복원</li>
     </ul>
   </section>
 
   <section>
-    <h2>4. 제3자 제공</h2>
+    <h2>4. 파트너 공유 기능</h2>
+    <p>달력이의 파트너 공유 기능은 iCal(.ics) 파일을 생성하여 사용자가 직접 상대방과 공유하는 방식으로 작동합니다.</p>
+    <ul>
+      <li>공유 데이터: 생리 예정일, 가임기, 배란 예정일 (건강 원본 데이터 아님)</li>
+      <li>서버를 통하지 않고 기기의 공유 기능(공유 시트)을 직접 사용</li>
+      <li>공유 여부와 대상은 사용자가 직접 결정하며, 앱이 자동으로 전송하지 않음</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. 제3자 제공</h2>
     <p>달력이는 사용자의 건강 데이터를 어떠한 제3자에게도 판매하거나 제공하지 않습니다.</p>
     <p>단, 앱 내 광고 표시를 위해 Google AdMob SDK를 사용합니다. AdMob은 광고 식별자를 사용할 수 있으며, 이는 Google의 개인정보처리방침을 따릅니다.</p>
     <ul>
@@ -221,7 +229,7 @@
   </section>
 
   <section>
-    <h2>5. 광고 (Google AdMob)</h2>
+    <h2>6. 광고 (Google AdMob)</h2>
     <p>달력이는 무료 서비스 유지를 위해 배너 광고를 표시합니다.</p>
     <ul>
       <li>표시 광고: 배너 광고 (홈, 통계 화면 하단)</li>
@@ -231,7 +239,7 @@
   </section>
 
   <section>
-    <h2>6. 데이터 보관 및 삭제</h2>
+    <h2>7. 데이터 보관 및 삭제</h2>
     <p>모든 데이터는 사용자 기기에만 저장됩니다.</p>
     <ul>
       <li><strong>삭제 방법:</strong> 앱 삭제 시 모든 데이터가 즉시 삭제됩니다</li>
@@ -241,17 +249,22 @@
   </section>
 
   <section>
-    <h2>7. 알림 권한</h2>
-    <p>생리 예정일 알림을 위해 알림 권한을 요청합니다. 알림 권한은 기기의 설정 앱에서 언제든지 철회할 수 있습니다. 알림을 거부해도 앱의 모든 핵심 기능을 사용할 수 있습니다.</p>
+    <h2>8. 알림 권한</h2>
+    <p>아래 알림을 위해 알림 권한을 요청합니다.</p>
+    <ul>
+      <li>생리 예정일 알림 (D-3, D-1) — 설정에서 켜거나 끌 수 있습니다</li>
+      <li>피임약 복용 알림 — 사용자가 활성화한 경우에만 발송됩니다</li>
+    </ul>
+    <p>알림 권한은 기기의 설정 앱에서 언제든지 철회할 수 있습니다. 알림을 거부해도 앱의 모든 핵심 기능을 사용할 수 있습니다.</p>
   </section>
 
   <section>
-    <h2>8. 아동 보호</h2>
+    <h2>9. 아동 보호</h2>
     <p>달력이는 13세 미만 아동을 대상으로 하지 않습니다. 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
   </section>
 
   <section>
-    <h2>9. 방침 변경</h2>
+    <h2>10. 방침 변경</h2>
     <p>개인정보처리방침이 변경될 경우, 이 페이지를 통해 공지합니다. 중요한 변경사항은 앱 업데이트 노트에도 안내됩니다.</p>
   </section>
 
@@ -268,7 +281,7 @@
 </main>
 
 <footer>
-  © 2025 CYK Intel · 달력이 · All rights reserved
+  © 2026 CYK Intel · 달력이 · All rights reserved
 </footer>
 
 </body>
